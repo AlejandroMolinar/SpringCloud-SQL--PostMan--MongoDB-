@@ -1,0 +1,21 @@
+ package com.microservicio.proof.app.respuesta.client;
+
+import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.microservicio.proof.commons.examen.models.entity.Exam;
+
+@FeignClient(name = "microservicio-examen")
+public interface ExamFeignClient {
+	
+	@GetMapping("/{id}")
+	public Exam reedByExamId(@PathVariable Long id);
+
+	@GetMapping("/answered")																		
+	public List<Long> findExamIdsByQuestionId(@RequestParam List<Long> questionId);
+
+}

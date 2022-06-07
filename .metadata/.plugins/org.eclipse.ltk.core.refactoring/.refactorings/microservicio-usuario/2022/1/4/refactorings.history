@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.microservicio.proof.app.usuario.client&apos; to &apos;microservicio-respuesta/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;microservicio-usuario&apos;&#x0D;&#x0A;- Destination element: &apos;microservicio-respuesta/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;microservicio-usuario/src/main/java/com.microservicio.proof.app.usuario.client&apos;" description="Copy package" destination="=microservicio-respuesta/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.microservicio.proof.app.usuario.client" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1642647949146" version="1.0"/>
+</session>

@@ -1,0 +1,24 @@
+package com.microservicio.proof.app.respuesta.models.repository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
+
+import com.microservicio.proof.app.respuesta.models.entity.Answer;
+
+public interface AnswerRepository extends MongoRepository<Answer, String> {
+	
+	//-----------------------------------------------------------------------------------
+    //	@Query 
+	//  'studentId' y 'questionId' son las variables Long de la Clase Answer	
+	//	'questionId' -> se guardara una Lista, lo cual es una tabla anidada, o una tabla adentro de otra tabla
+	//	Mongo comienza en cero (?0) 
+	//
+	//
+	//-----------------------------------------------------------------------------------
+	
+	
+	@Query("{'studentId': ?0, 'questionId': {$in: ?1} }")
+	public Iterable<Answer> findAnswerByStudentByQuestion(Long studentId, Iterable<Long> questionId);
+	
+	public Iterable<Long> findExamAnsweredByStudent(Long studentId);
+}
